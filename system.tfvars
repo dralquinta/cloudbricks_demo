@@ -5,7 +5,7 @@
 # Purpose: The following script defines the system particular variables to provision environment
 
 ########## PROVIDER SPECIFIC VARIABLES ##########
-region           = "sa-santiago-1"
+region           = "us-ashburn-1"
 tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaaoqdygmiidrabhv3y4hkr3rb3z6dpmgotvq2scffra6jt7rubresa"
 user_ocid        = "ocid1.user.oc1..aaaaaaaafl42rhkw624h4os6n2ulcfxjjn2ylqsanhgtcph7j7owirzj6gya"
 fingerprint      = "11:32:10:d8:52:2b:dd:85:0a:04:0f:47:23:be:72:70"
@@ -17,7 +17,7 @@ instance01_ssh_public_key                   = "/home/opc/.ssh/OCI_KEYS/SSH/auto_
 instance01_ssh_private_key                  = "/home/opc/.ssh/OCI_KEYS/SSH/auto_ssh_id_rsa"
 instance01_ssh_public_is_path               = true
 instance01_ssh_private_is_path              = true
-instance01_compute_availability_domain_list = ["oDQF:sa-santiago-1-AD-1"]
+instance01_compute_availability_domain_list = ["oDQF:US-ASHBURN-AD-2"]
 
 instance01_network_subnet_name                     = "Public Subnet-VCN"
 instance01_assign_public_ip_flag                   = true
@@ -26,11 +26,11 @@ instance01_bkp_policy_boot_volume                  = "bronze"
 instance01_linux_compute_instance_compartment_name = "CloudbricksDemo"
 instance01_linux_compute_network_compartment_name  = "CloudbricksDemo"
 instance01_vcn_display_name                        = "VCN"
-instance01_num_instances                           = 2
+instance01_num_instances                           = 1
 instance01_is_nsg_required                         = false
 instance01_compute_nsg_name                        = ""
-instance01_compute_display_name_base               = "ubuntu"
-instance01_instance_image_ocid                     = "ocid1.image.oc1.sa-santiago-1.aaaaaaaaovioordeomhpi73yxovfafcfngv4mv6qeuoe4otru42fn6nostca"
+instance01_compute_display_name_base               = "demoubuntu"
+instance01_instance_image_ocid                     = "ocid1.image.oc1.iad.aaaaaaaamc2xy64p4r4tcwjy26ksdkehrdrzjcacw4upaq7fnqict55as4kq"
 instance01_instance_shape                          = "VM.Standard3.Flex"
 instance01_is_flex_shape                           = true
 instance01_instance_shape_config_ocpus             = 1
@@ -47,8 +47,18 @@ fssdisk01_fss_network_compartment_name         = "CloudbricksDemo"
 fssdisk01_mt_compartment_name                  = "CloudbricksDemo"
 fssdisk01_vcn_display_name                     = "VCN"
 fssdisk01_network_subnet_name                  = "Public Subnet-VCN"
-fssdisk01_fss_mount_target_availability_domain = "oDQF:SA-SANTIAGO-1-AD-1"
-fssdisk01_fss_mount_target_name                = "cloudbricksmt"
+fssdisk01_fss_mount_target_availability_domain = "oDQF:US-ASHBURN-AD-2"
+fssdisk01_fss_mount_target_name                = "demo_mt"
 fssdisk01_os_type                              = "ubuntu"
 fssdisk01_ssh_private_key                      = "/home/opc/.ssh/OCI_KEYS/SSH/auto_ssh_id_rsa"
+########## ARTIFACT SPECIFIC VARIABLES ##########
+
+########## ARTIFACT SPECIFIC VARIABLES ##########
+asciiart01_ssh_public_key      = "/home/opc/.ssh/OCI_KEYS/SSH/auto_ssh_id_rsa.pub"
+asciiart01_ssh_private_key     = "/home/opc/.ssh/OCI_KEYS/SSH/auto_ssh_id_rsa"
+asciiart01_ssh_public_is_path  = true
+asciiart01_ssh_private_is_path = true
+asciiart01_script_name         = "./scripts/ascii_art.sh"
+asciiart01_script_args         = "DENNY ALQUINTA"
+asciiart01_exec_user           = "ubuntu"
 ########## ARTIFACT SPECIFIC VARIABLES ##########

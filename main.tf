@@ -68,3 +68,24 @@ module "fssdisk01" {
   ssh_private_key                      = var.fssdisk01_ssh_private_key
   ######################################## ARTIFACT SPECIFIC VARIABLES ######################################
 }
+
+
+module "asciiart01" {
+  source     = "git::ssh://git@github.com/oracle-devrel/terraform-oci-cloudbricks-remote-linux-executor.git?ref=v1.1.0"
+  depends_on = [
+                module.instance01,
+                module.fssdisk01
+                ]
+  count      = length(module.instance01.instance.*.id)
+  ######################################## ARTIFACT SPECIFIC VARIABLES ######################################
+  ssh_public_key                 = var.asciiart01_ssh_public_key
+  ssh_private_key                = var.asciiart01_ssh_private_key
+  ssh_public_is_path             = var.asciiart01_ssh_public_is_path
+  ssh_private_is_path            = var.asciiart01_ssh_private_is_path
+  script_name                    = var.asciiart01_script_name
+  script_args                    = var.asciiart01_script_args
+  linux_compute_private_ip       = module.instance01.instance[count.index].private_ip
+  exec_user                      = var.asciiart01_exec_user
+  ######################################## ARTIFACT SPECIFIC VARIABLES ######################################
+
+}

@@ -9,8 +9,8 @@ terraform {
   backend "s3" {
     bucket   = "tfstate_bucket"
     key      = "Cloudbricks_Demo/sample.tfstate"
-    region   = "sa-santiago-1"
-    endpoint = "https://idhkis4m3p5e.compat.objectstorage.sa-santiago-1.oraclecloud.com"
+    region   = "us-ashburn-1"
+    endpoint = "https://idhkis4m3p5e.compat.objectstorage.us-ashburn-1.oraclecloud.com"
 
     skip_region_validation      = true
     skip_credentials_validation = true

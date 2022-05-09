@@ -27,8 +27,8 @@ variable "private_key_path" {
 }
 /********** Provider Variables NOT OVERLOADABLE **********/
 
-/********* Instance Variables *********/
-/********** Compute SSH Key Variables **********/
+/********** Compute Variables **********/
+
 variable "instance01_ssh_public_is_path" {
   description = "Describes if SSH Public Key is located on file or inside code"
   default     = false
@@ -49,9 +49,7 @@ variable "instance01_ssh_private_key" {
   description = "Private key to log into machine"
 
 }
-/********** Compute SSH Key Variables **********/
 
-/********** Compute Variables **********/
 variable "instance01_num_instances" {
   description = "Amount of instances to create"
   default     = 0
@@ -139,9 +137,7 @@ variable "instance01_is_nsg_required" {
   type        = bool
 
 }
-/********** Compute Variables **********/
 
-/********** Compute Datasource and Subnet Lookup related variables **********/
 variable "instance01_compute_availability_domain_list" {
   type        = list(any)
   description = "Defines the availability domain list where OCI artifact will be created. This is a numeric value greater than 0"
@@ -154,9 +150,7 @@ variable "instance01_network_subnet_name" {
 variable "instance01_vcn_display_name" {
   description = "VCN Display name to execute lookup"
 }
-/********** Compute Datasource related variables **********/
-
-/********* Instance Variables *********/
+/********** Compute Variables **********/
 
 /********** FSS Variables **********/
 
@@ -236,9 +230,6 @@ variable "fssdisk01_is_winrm_configured_with_ssl" {
   default     = true
 }
 
-
-/********** Datasource and Subnet Lookup related variables **********/
-
 variable "fssdisk01_fss_instance_compartment_name" {
   description = "Defines the compartment name where the infrastructure will be created"
   default     = ""
@@ -261,6 +252,42 @@ variable "fssdisk01_network_subnet_name" {
   description = "Name of the subnet where the artifact is located"
 }
 
-/********** Datasource related variables **********/
-
 /********** FSS Variables **********/
+
+/********** Executor Variables **********/
+variable "asciiart01_script_name" {
+  description = "Name of .sh script"
+  default     = "script.sh"
+}
+
+variable "asciiart01_script_args" {
+  description = "Arguments that are passed on to the script"
+  default     = null
+}
+
+variable "asciiart01_ssh_public_is_path" {
+  description = "Describes if SSH Public Key is located on file or inside code"
+  default     = false
+}
+
+variable "asciiart01_ssh_private_is_path" {
+  description = "Describes if SSH Private Key is located on file or inside code"
+  default     = false
+}
+
+variable "asciiart01_ssh_public_key" {
+  description = "Defines SSH Public Key to be used in order to remotely connect to compute instance"
+  type        = string
+
+}
+
+variable "asciiart01_ssh_private_key" {
+  description = "Private key to log into machine"
+
+}
+
+variable "asciiart01_exec_user" {
+  description = "User which will execute the script"
+}
+
+/********** Executor Variables **********/
