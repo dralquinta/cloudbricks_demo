@@ -7,6 +7,7 @@
 set +x
 
 echo "[1/2] Install Boxes"
+sleep $2
 sudo apt-get install boxes -y
 echo "[1/2] Done"
 

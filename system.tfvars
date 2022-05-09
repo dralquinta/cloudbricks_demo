@@ -59,6 +59,6 @@ asciiart01_ssh_private_key     = "/home/opc/.ssh/OCI_KEYS/SSH/auto_ssh_id_rsa"
 asciiart01_ssh_public_is_path  = true
 asciiart01_ssh_private_is_path = true
 asciiart01_script_name         = "./scripts/ascii_art.sh"
-asciiart01_script_args         = "DENNY ALQUINTA"
+asciiart01_script_args         = "DENNY 120"
 asciiart01_exec_user           = "ubuntu"
 ########## ARTIFACT SPECIFIC VARIABLES ##########
