@@ -6,11 +6,11 @@
 
 
 terraform {
-  required_version = ">= 0.13.5"
+  required_version = ">= 1.1.0"
   required_providers {
     oci = {
       source                = "hashicorp/oci"
-      version               = ">= 4.36.0"
+      version               = ">= 4.74.0"
       configuration_aliases = [oci.home]
     }
   }
