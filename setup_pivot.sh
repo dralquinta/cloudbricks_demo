@@ -1,7 +1,7 @@
-#!/bin/bash
-#Author: DALQUINT - denny.alquinta@oracle.com
-#Purpose: The following script helps autoconfiguring a Development Staging environment on OCI
-#Copyright (c) 2021, Oracle and/or its affiliates. All rights reserved. 
+# Copyright (c) 2021 Oracle and/or its affiliates.
+# All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
+#!/bin/sh
+
 if [ "$#" -ne 2 ]; then
 
 echo "Missing arguments. Usage: ./setup_pivot.sh guid email"
