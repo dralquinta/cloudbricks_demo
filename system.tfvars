@@ -6,9 +6,9 @@
 
 ########## PROVIDER SPECIFIC VARIABLES ##########
 region           = "us-ashburn-1"
-tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaaoqdygmiidrabhv3y4hkr3rb3z6dpmgotvq2scffra6jt7rubresa"
-user_ocid        = "ocid1.user.oc1..aaaaaaaafl42rhkw624h4os6n2ulcfxjjn2ylqsanhgtcph7j7owirzj6gya"
-fingerprint      = "11:32:10:d8:52:2b:dd:85:0a:04:0f:47:23:be:72:70"
+tenancy_ocid     = "ocid1.tenancy.oc1..foo"
+user_ocid        = "ocid1.user.oc1..bar"
+fingerprint      = "11:32:1bar:bar:bar:bar:foo:foo:foo72:70"
 private_key_path = "/home/opc/.ssh/OCI_KEYS/API/auto_api_key.pem"
 ########## PROVIDER SPECIFIC VARIABLES ##########
 
@@ -17,7 +17,7 @@ instance01_ssh_public_key                   = "/home/opc/.ssh/OCI_KEYS/SSH/auto_
 instance01_ssh_private_key                  = "/home/opc/.ssh/OCI_KEYS/SSH/auto_ssh_id_rsa"
 instance01_ssh_public_is_path               = true
 instance01_ssh_private_is_path              = true
-instance01_compute_availability_domain_list = ["oDQF:US-ASHBURN-AD-2"]
+instance01_compute_availability_domain_list = ["xyzq:US-ASHBURN-AD-2"]
 
 instance01_network_subnet_name                     = "Public Subnet-VCN"
 instance01_assign_public_ip_flag                   = true
@@ -47,7 +47,7 @@ fssdisk01_fss_network_compartment_name         = "CloudbricksDemo"
 fssdisk01_mt_compartment_name                  = "CloudbricksDemo"
 fssdisk01_vcn_display_name                     = "VCN"
 fssdisk01_network_subnet_name                  = "Public Subnet-VCN"
-fssdisk01_fss_mount_target_availability_domain = "oDQF:US-ASHBURN-AD-2"
+fssdisk01_fss_mount_target_availability_domain = "xyzq:US-ASHBURN-AD-2"
 fssdisk01_fss_mount_target_name                = "demo_mt"
 fssdisk01_os_type                              = "ubuntu"
 fssdisk01_ssh_private_key                      = "/home/opc/.ssh/OCI_KEYS/SSH/auto_ssh_id_rsa"
