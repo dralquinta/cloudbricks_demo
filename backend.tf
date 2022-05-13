@@ -10,7 +10,7 @@ terraform {
     bucket   = "status_bucket"
     key      = "Cloudbricks_Demo/sample.tfstate"
     region   = "us-ashburn-1"
-    endpoint = "https://idhkis4m3p5e.compat.objectstorage.us-ashburn-1.oraclecloud.com"
+    endpoint = "https://foobarbar.compat.objectstorage.us-ashburn-1.oraclecloud.com"
 
     skip_region_validation      = true
     skip_credentials_validation = true
